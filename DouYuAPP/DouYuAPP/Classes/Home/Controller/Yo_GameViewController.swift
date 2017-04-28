@@ -8,7 +8,24 @@
 
 import UIKit
 
-class Yo_GameViewController: UIViewController {
+
+class Yo_GameViewController: GenericViewController<Yo_GameContentView> {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        loadGameData()
+    }
     
+    fileprivate lazy var gameViewModel = Yo_GameViewModel()
+}
+
+extension Yo_GameViewController {
+    
+    fileprivate func loadGameData() {
+        gameViewModel.loadGameData { (commonGame, allGame) in
+            
+            
+        }
+    }
 }

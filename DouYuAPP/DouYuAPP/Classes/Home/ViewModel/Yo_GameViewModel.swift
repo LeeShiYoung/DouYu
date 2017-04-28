@@ -8,25 +8,23 @@
 //
 
 import UIKit
+import ObjectMapper
 
-public let HomeGameViewCell = "HomeGameViewCell"
-
-class Yo_GameViewModel: Yo_BaseCollectionViewModel {
-
-    override func dequeueCellID(_ indexPath: IndexPath) -> String {
-        return  HomeGameViewCell
-    }
+class Yo_GameViewModel: NSObject {
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: dequeueCellID(indexPath), for: indexPath) as! Yo_HomeGameViewCell
-        cell.configure(Item: dataSoureArr[indexPath.item], indexPath: indexPath)
-        return cell
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataSoureArr.count
-    }
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+    /// 加载游戏栏目数据
+    ///
+    /// - Parameter finishCallBack: 常见 全部 数据回调
+    public func loadGameData(_ finishCallBack: @escaping (_: [Yo_GameModel], [Yo_GameModel]) -> ()) {
+        
+        LSYNetWorkTool.httpRequest(method: .get, url: GenerateUrl + "getColumnDetail", parmaters: ["shortName" : "game"], resultClass: Yo_BaseResultModel.self) { (success, failure) in
+            
+            if let success = success {
+                if !success.error {
+                    let gameModelArr = Mapper<Yo_GameModel>().mapArray(JSONArray: success.data!)
+                    finishCallBack(Array(gameModelArr![0..<10]), gameModelArr!)
+                }
+            }
+        }
     }
 }

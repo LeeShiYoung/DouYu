@@ -13,6 +13,9 @@
 		1FD4D3081E76CDA6003D485F /* DouYuAPPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD4D3071E76CDA6003D485F /* DouYuAPPUITests.swift */; };
 		8EF407FBE85D8FC903F7A088 /* Pods_DouYuAPPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F54649E5C0E5680D3670074 /* Pods_DouYuAPPTests.framework */; };
 		8FF31D6A05699386B2EA3A5F /* Pods_DouYuAPPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC19344B5DBA48E3E7361BD /* Pods_DouYuAPPUITests.framework */; };
+		C802C6641EB2E79E008A4079 /* Yo_GameCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C802C6631EB2E79E008A4079 /* Yo_GameCollectionViewModel.swift */; };
+		C802C6661EB2E988008A4079 /* Yo_GameContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C802C6651EB2E988008A4079 /* Yo_GameContentView.swift */; };
+		C802C6681EB2EB16008A4079 /* Yo_GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C802C6671EB2EB16008A4079 /* Yo_GameModel.swift */; };
 		C808B1411E9B7ABB002928BE /* Yo_RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C808B1401E9B7ABB002928BE /* Yo_RoomShowViewController.swift */; };
 		C808B1431E9B7AD8002928BE /* Yo_RoomShowContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C808B1421E9B7AD8002928BE /* Yo_RoomShowContentView.swift */; };
 		C808B1471E9B7B3D002928BE /* Yo_RoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C808B1461E9B7B3D002928BE /* Yo_RoomNormalViewController.swift */; };
@@ -20,6 +23,7 @@
 		C826963D1EA9E43700D579A8 /* Yo_portraitLiveControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C826963C1EA9E43700D579A8 /* Yo_portraitLiveControlView.swift */; };
 		C826963F1EA9E44A00D579A8 /* Yo_landscapeLiveControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C826963E1EA9E44A00D579A8 /* Yo_landscapeLiveControlView.swift */; };
 		C82EEAAB1EA9A26B007C0721 /* Yo_RoomNormalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EEAAA1EA9A26B007C0721 /* Yo_RoomNormalViewModel.swift */; };
+		C86431031EAF3AB7007563CC /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86431021EAF3AB7007563CC /* IJKMediaFramework.framework */; };
 		C86BAA281EA8A67A002F46B6 /* Yo_MoviePlayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86BAA271EA8A67A002F46B6 /* Yo_MoviePlayerProtocol.swift */; };
 		C86BAA2C1EA8AEB3002F46B6 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C86BAA2B1EA8AEB3002F46B6 /* libsqlite3.0.tbd */; };
 		C86BAA2E1EA8AEC3002F46B6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C86BAA2D1EA8AEC3002F46B6 /* libz.tbd */; };
@@ -112,6 +116,9 @@
 		89C04BE8F493309CA7C6FFD5 /* Pods-DouYuAPPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuAPPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuAPPTests/Pods-DouYuAPPTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9F54649E5C0E5680D3670074 /* Pods_DouYuAPPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouYuAPPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C551C7A0D3BCA41CE16F61 /* Pods-DouYuAPPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuAPPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuAPPTests/Pods-DouYuAPPTests.release.xcconfig"; sourceTree = "<group>"; };
+		C802C6631EB2E79E008A4079 /* Yo_GameCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_GameCollectionViewModel.swift; sourceTree = "<group>"; };
+		C802C6651EB2E988008A4079 /* Yo_GameContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_GameContentView.swift; sourceTree = "<group>"; };
+		C802C6671EB2EB16008A4079 /* Yo_GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_GameModel.swift; sourceTree = "<group>"; };
 		C808B1401E9B7ABB002928BE /* Yo_RoomShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_RoomShowViewController.swift; sourceTree = "<group>"; };
 		C808B1421E9B7AD8002928BE /* Yo_RoomShowContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_RoomShowContentView.swift; sourceTree = "<group>"; };
 		C808B1461E9B7B3D002928BE /* Yo_RoomNormalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_RoomNormalViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +127,7 @@
 		C826963C1EA9E43700D579A8 /* Yo_portraitLiveControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_portraitLiveControlView.swift; sourceTree = "<group>"; };
 		C826963E1EA9E44A00D579A8 /* Yo_landscapeLiveControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_landscapeLiveControlView.swift; sourceTree = "<group>"; };
 		C82EEAAA1EA9A26B007C0721 /* Yo_RoomNormalViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_RoomNormalViewModel.swift; sourceTree = "<group>"; };
+		C86431021EAF3AB7007563CC /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		C86BAA271EA8A67A002F46B6 /* Yo_MoviePlayerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_MoviePlayerProtocol.swift; sourceTree = "<group>"; };
 		C86BAA2B1EA8AEB3002F46B6 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		C86BAA2D1EA8AEC3002F46B6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -190,6 +198,7 @@
 				C86BAA2E1EA8AEC3002F46B6 /* libz.tbd in Frameworks */,
 				C86BAA2C1EA8AEB3002F46B6 /* libsqlite3.0.tbd in Frameworks */,
 				EC296E95D6E1C610A914514B /* Pods_DouYuAPP.framework in Frameworks */,
+				C86431031EAF3AB7007563CC /* IJKMediaFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				C870EC441E8F889F00839FA9 /* Yo_HomeCycleModel.swift */,
+				C802C6671EB2EB16008A4079 /* Yo_GameModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -415,6 +425,7 @@
 				C8C002891E8E21B600E01745 /* Yo_RecommendPrettyCell.swift */,
 				C870EC481E8F980700839FA9 /* Yo_HomeCycleView.swift */,
 				C870EC4A1E8FA5A600839FA9 /* Yo_HomeGameViewCell.swift */,
+				C802C6651EB2E988008A4079 /* Yo_GameContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -427,6 +438,7 @@
 				C8A5720C1E8CFF5900C84579 /* Yo_RecommendCollectionViewModel.swift */,
 				C870EC421E8F833B00839FA9 /* Yo_HomeCycleViewModel.swift */,
 				C870EC4C1E8FAB4700839FA9 /* Yo_GameViewModel.swift */,
+				C802C6631EB2E79E008A4079 /* Yo_GameCollectionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -636,6 +648,7 @@
 		C8F25DEB1E77F0E5009AC961 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				C86431021EAF3AB7007563CC /* IJKMediaFramework.framework */,
 				C8B60C4D1E79115500AE7BCC /* ConfigureUI */,
 			);
 			path = Lib;
@@ -938,6 +951,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C892F72E1E9CCA4E00737689 /* IndicatorViewProtocol.swift in Sources */,
+				C802C6641EB2E79E008A4079 /* Yo_GameCollectionViewModel.swift in Sources */,
 				C8B60C5D1E7911B500AE7BCC /* Yo_HomeViewController.swift in Sources */,
 				C884662D1E8B86F800EB57AB /* Yo_RecommendViewModel.swift in Sources */,
 				C881549F1E94EFEB00922C32 /* Yo_MainExtension.swift in Sources */,
@@ -946,6 +960,7 @@
 				C8C0028A1E8E21B600E01745 /* Yo_RecommendPrettyCell.swift in Sources */,
 				C884662B1E8B85C500EB57AB /* Yo_BaseResultModel.swift in Sources */,
 				C8B60C551E79115500AE7BCC /* GenericTableViewCell.swift in Sources */,
+				C802C6661EB2E988008A4079 /* Yo_GameContentView.swift in Sources */,
 				C8A572071E8CE51C00C84579 /* Yo_BaseCollectionViewCell.swift in Sources */,
 				C8C002861E8DE8A200E01745 /* GenericReusableView.swift in Sources */,
 				C8B632451E89177800AF3871 /* Yo_MainTabBarController.swift in Sources */,
@@ -963,6 +978,7 @@
 				C86BAA281EA8A67A002F46B6 /* Yo_MoviePlayerProtocol.swift in Sources */,
 				C8B6324A1E891A3400AF3871 /* LSYNetWorkTool.swift in Sources */,
 				C808B1431E9B7AD8002928BE /* Yo_RoomShowContentView.swift in Sources */,
+				C802C6681EB2EB16008A4079 /* Yo_GameModel.swift in Sources */,
 				C870EC4B1E8FA5A600839FA9 /* Yo_HomeGameViewCell.swift in Sources */,
 				C8B60C571E79115500AE7BCC /* GenericViewController.swift in Sources */,
 				C870EC431E8F833B00839FA9 /* Yo_HomeCycleViewModel.swift in Sources */,

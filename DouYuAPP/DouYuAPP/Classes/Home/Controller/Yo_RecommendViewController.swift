@@ -38,14 +38,15 @@ class Yo_RecommendViewController: GenericViewController<Yo_RecommendContentView>
         let viewModel = Yo_RecommendCollectionViewModel(CollectionView: (self?.contentView.collectionView)!)
         viewModel.delegate = self
         return viewModel
-    }()
+        }()
+    
     fileprivate lazy var cycleViewModel: Yo_HomeCycleViewModel = {[weak self] in
         let cycleViewModel = Yo_HomeCycleViewModel(CycleView: (self?.contentView.cycleView)!)
         return cycleViewModel
         }()
     
-    fileprivate lazy var gameViewModel: Yo_GameViewModel = {[weak self] in
-        return Yo_GameViewModel(CollectionView: (self?.contentView.gameView)!)
+    fileprivate lazy var gameViewModel: Yo_GameCollectionViewModel = {[weak self] in
+        return Yo_GameCollectionViewModel(CollectionView: (self?.contentView.gameView)!)
         }()
 }
 
