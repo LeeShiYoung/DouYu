@@ -24,6 +24,7 @@
 		C826963F1EA9E44A00D579A8 /* Yo_landscapeLiveControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C826963E1EA9E44A00D579A8 /* Yo_landscapeLiveControlView.swift */; };
 		C82EEAAB1EA9A26B007C0721 /* Yo_RoomNormalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EEAAA1EA9A26B007C0721 /* Yo_RoomNormalViewModel.swift */; };
 		C86431031EAF3AB7007563CC /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86431021EAF3AB7007563CC /* IJKMediaFramework.framework */; };
+		C865AFCE1EB82C7E0017EF8E /* Yo_ListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C865AFCD1EB82C7E0017EF8E /* Yo_ListViewModelProtocol.swift */; };
 		C86BAA281EA8A67A002F46B6 /* Yo_MoviePlayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86BAA271EA8A67A002F46B6 /* Yo_MoviePlayerProtocol.swift */; };
 		C86BAA2C1EA8AEB3002F46B6 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C86BAA2B1EA8AEB3002F46B6 /* libsqlite3.0.tbd */; };
 		C86BAA2E1EA8AEC3002F46B6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C86BAA2D1EA8AEC3002F46B6 /* libz.tbd */; };
@@ -128,6 +129,7 @@
 		C826963E1EA9E44A00D579A8 /* Yo_landscapeLiveControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_landscapeLiveControlView.swift; sourceTree = "<group>"; };
 		C82EEAAA1EA9A26B007C0721 /* Yo_RoomNormalViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_RoomNormalViewModel.swift; sourceTree = "<group>"; };
 		C86431021EAF3AB7007563CC /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		C865AFCD1EB82C7E0017EF8E /* Yo_ListViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_ListViewModelProtocol.swift; sourceTree = "<group>"; };
 		C86BAA271EA8A67A002F46B6 /* Yo_MoviePlayerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_MoviePlayerProtocol.swift; sourceTree = "<group>"; };
 		C86BAA2B1EA8AEB3002F46B6 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		C86BAA2D1EA8AEC3002F46B6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -567,6 +569,7 @@
 				C8C3E3501EA0A63600698F3F /* Notifier.swift */,
 				C8C3E3521EA0B6C000698F3F /* Yo_MainNotification.swift */,
 				C86BAA271EA8A67A002F46B6 /* Yo_MoviePlayerProtocol.swift */,
+				C865AFCD1EB82C7E0017EF8E /* Yo_ListViewModelProtocol.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -991,6 +994,7 @@
 				C8B60C751E79127400AE7BCC /* Yo_FllowContentView.swift in Sources */,
 				C86C1C3C1E8A4B6500EABC77 /* Yo_BaseCollectionViewModel.swift in Sources */,
 				C86C1C1D1E89FD8A00EABC77 /* LSYUser.swift in Sources */,
+				C865AFCE1EB82C7E0017EF8E /* Yo_ListViewModelProtocol.swift in Sources */,
 				C86C1C271E8A10D400EABC77 /* Yo_Common.swift in Sources */,
 				C808B1491E9B7B50002928BE /* Yo_RoomNormalContentView.swift in Sources */,
 				C808B1471E9B7B3D002928BE /* Yo_RoomNormalViewController.swift in Sources */,

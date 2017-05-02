@@ -20,46 +20,40 @@ let kNormalItemW = (kScreenW - 3 * kItemMargin) / 2
 let kNormalItemH = kNormalItemW * 3 / 4
 let kPrettyItemH = kNormalItemW * 4 / 3
 
-class Yo_BaseCollectionViewModel: NSObject {
+class Yo_BaseCollectionViewModel: NSObject, Yo_ListViewModelProtocol {
 
     fileprivate var collectionView: UICollectionView?
     
-    init(CollectionView collection: UICollectionView) {
+    required init(CollectionView collection: UICollectionView) {
         self.collectionView = collection
         super.init()
-        
         self.collectionView?.dataSource = self
-        
     }
     
+    typealias dataSoure = [Yo_AnchorBaseGroup]
     
-    public func registerCell(_ cells:() -> [String: UICollectionViewCell.Type]) {
+    public lazy var dataSoureArr = dataSoure()
+    
+    public func set(DataSource data: () -> [Yo_AnchorBaseGroup], completion: () -> ()) {
+        dataSoureArr.append(contentsOf: data())
+        completion()
+    }
+    
+    public func registerCell(_ cells: () -> [String : UICollectionViewCell.Type]) {
         for (key, value) in cells() {
             collectionView?.register(value, forCellWithReuseIdentifier: key)
         }
     }
     
-    public func registerReusableView(Kind kind: String, views:() -> [String: UIView.Type]) {
+    public func registerReusableView(Kind kind: String, views: () -> [String : UIView.Type]) {
         for (key, value) in views() {
             collectionView?.register(value, forSupplementaryViewOfKind: kind, withReuseIdentifier: key)
         }
     }
     
-    public func set(DataSource data:() -> [Yo_AnchorBaseGroup], completion: () -> ()) {
-        dataSoureArr.append(contentsOf: data())
-        completion()
-    }
-    
     public func dequeueCellID(_ indexPath: IndexPath) -> String {
         return ""
     }
-    
-    public lazy var dataSoureArr: [Yo_AnchorBaseGroup] = {
-        let arr = [Yo_AnchorBaseGroup]()
-        return arr
-    }()
-    
-    
 }
 
 extension Yo_BaseCollectionViewModel: UICollectionViewDataSource {

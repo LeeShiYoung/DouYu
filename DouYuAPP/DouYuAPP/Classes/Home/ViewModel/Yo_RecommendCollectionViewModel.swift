@@ -20,7 +20,7 @@ protocol Yo_RecommendCollectionViewModelDeleagte: NSObjectProtocol {
 class Yo_RecommendCollectionViewModel: Yo_BaseCollectionViewModel {
     
     weak var delegate: Yo_RecommendCollectionViewModelDeleagte?
-    override init(CollectionView collection: UICollectionView) {
+    required init(CollectionView collection: UICollectionView) {
         super.init(CollectionView: collection)
         collection.delegate = self
     }
@@ -31,7 +31,6 @@ class Yo_RecommendCollectionViewModel: Yo_BaseCollectionViewModel {
         }
         return normalCellID
     }
-    
     
 }
 
