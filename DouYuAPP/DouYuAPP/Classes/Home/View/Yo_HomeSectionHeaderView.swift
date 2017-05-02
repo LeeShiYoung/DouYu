@@ -25,18 +25,13 @@ class Yo_HomeSectionHeaderView: Yo_BaseSectionHeaderView {
         return moreBtn
     }()
     
-    fileprivate lazy var garyLayer: CALayer = {
-        let garyLayer = CALayer()
-        garyLayer.frame = CGRect(x: 0, y: 0, width: kScreenW, height: 10)
-        garyLayer.backgroundColor = UIColor.colorWithHex("#e5e5e5")?.cgColor
-        return garyLayer
-    }()
+    
 }
 
 extension Yo_HomeSectionHeaderView {
     fileprivate func setupUI() {
         
-        layer.addSublayer(garyLayer)
+        
         moreBtn.snp.makeConstraints { (maker) in
             maker.right.equalTo(self.snp.right).offset(-10)
             maker.centerY.equalTo(sectionName.snp.centerY)

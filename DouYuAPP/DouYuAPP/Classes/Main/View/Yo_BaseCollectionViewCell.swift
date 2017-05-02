@@ -17,6 +17,8 @@ class Yo_BaseCollectionViewCell: GenericCollectionViewCell {
         coverImage.snp.makeConstraints { (maker) in
             maker.left.right.top.bottom.equalTo(contentView)
         }
+        
+        
     }
     
     public lazy var coverImage: UIImageView = {[weak self] in

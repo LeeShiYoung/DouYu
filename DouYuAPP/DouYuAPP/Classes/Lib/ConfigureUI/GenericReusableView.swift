@@ -24,6 +24,6 @@ class GenericReusableView: UICollectionReusableView, ConfigurableView {
         configureView()
     }
     func configureView() {
-        
+        backgroundColor = UIColor.white
     }
 }

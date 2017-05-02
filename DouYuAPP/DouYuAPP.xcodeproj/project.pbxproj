@@ -13,7 +13,6 @@
 		1FD4D3081E76CDA6003D485F /* DouYuAPPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD4D3071E76CDA6003D485F /* DouYuAPPUITests.swift */; };
 		8EF407FBE85D8FC903F7A088 /* Pods_DouYuAPPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F54649E5C0E5680D3670074 /* Pods_DouYuAPPTests.framework */; };
 		8FF31D6A05699386B2EA3A5F /* Pods_DouYuAPPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC19344B5DBA48E3E7361BD /* Pods_DouYuAPPUITests.framework */; };
-		C802C6641EB2E79E008A4079 /* Yo_GameCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C802C6631EB2E79E008A4079 /* Yo_GameCollectionViewModel.swift */; };
 		C802C6661EB2E988008A4079 /* Yo_GameContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C802C6651EB2E988008A4079 /* Yo_GameContentView.swift */; };
 		C802C6681EB2EB16008A4079 /* Yo_GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C802C6671EB2EB16008A4079 /* Yo_GameModel.swift */; };
 		C808B1411E9B7ABB002928BE /* Yo_RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C808B1401E9B7ABB002928BE /* Yo_RoomShowViewController.swift */; };
@@ -25,6 +24,11 @@
 		C82EEAAB1EA9A26B007C0721 /* Yo_RoomNormalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EEAAA1EA9A26B007C0721 /* Yo_RoomNormalViewModel.swift */; };
 		C86431031EAF3AB7007563CC /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C86431021EAF3AB7007563CC /* IJKMediaFramework.framework */; };
 		C865AFCE1EB82C7E0017EF8E /* Yo_ListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C865AFCD1EB82C7E0017EF8E /* Yo_ListViewModelProtocol.swift */; };
+		C865AFD01EB85DD80017EF8E /* Yo_RecommendGameCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C865AFCF1EB85DD80017EF8E /* Yo_RecommendGameCollectionViewModel.swift */; };
+		C865AFD41EB867350017EF8E /* Yo_CommonGameViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C865AFD31EB867350017EF8E /* Yo_CommonGameViewCell.swift */; };
+		C865AFD61EB878170017EF8E /* Yo_CommonGameCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C865AFD51EB878170017EF8E /* Yo_CommonGameCollectionViewModel.swift */; };
+		C865AFD81EB878260017EF8E /* Yo_AllGameCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C865AFD71EB878260017EF8E /* Yo_AllGameCollectionViewModel.swift */; };
+		C865AFDA1EB8792F0017EF8E /* Yo_AllGameViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C865AFD91EB8792F0017EF8E /* Yo_AllGameViewCell.swift */; };
 		C86BAA281EA8A67A002F46B6 /* Yo_MoviePlayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86BAA271EA8A67A002F46B6 /* Yo_MoviePlayerProtocol.swift */; };
 		C86BAA2C1EA8AEB3002F46B6 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C86BAA2B1EA8AEB3002F46B6 /* libsqlite3.0.tbd */; };
 		C86BAA2E1EA8AEC3002F46B6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C86BAA2D1EA8AEC3002F46B6 /* libz.tbd */; };
@@ -117,7 +121,6 @@
 		89C04BE8F493309CA7C6FFD5 /* Pods-DouYuAPPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuAPPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuAPPTests/Pods-DouYuAPPTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9F54649E5C0E5680D3670074 /* Pods_DouYuAPPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DouYuAPPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C551C7A0D3BCA41CE16F61 /* Pods-DouYuAPPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouYuAPPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DouYuAPPTests/Pods-DouYuAPPTests.release.xcconfig"; sourceTree = "<group>"; };
-		C802C6631EB2E79E008A4079 /* Yo_GameCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_GameCollectionViewModel.swift; sourceTree = "<group>"; };
 		C802C6651EB2E988008A4079 /* Yo_GameContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_GameContentView.swift; sourceTree = "<group>"; };
 		C802C6671EB2EB16008A4079 /* Yo_GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_GameModel.swift; sourceTree = "<group>"; };
 		C808B1401E9B7ABB002928BE /* Yo_RoomShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_RoomShowViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +133,11 @@
 		C82EEAAA1EA9A26B007C0721 /* Yo_RoomNormalViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_RoomNormalViewModel.swift; sourceTree = "<group>"; };
 		C86431021EAF3AB7007563CC /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		C865AFCD1EB82C7E0017EF8E /* Yo_ListViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_ListViewModelProtocol.swift; sourceTree = "<group>"; };
+		C865AFCF1EB85DD80017EF8E /* Yo_RecommendGameCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_RecommendGameCollectionViewModel.swift; sourceTree = "<group>"; };
+		C865AFD31EB867350017EF8E /* Yo_CommonGameViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_CommonGameViewCell.swift; sourceTree = "<group>"; };
+		C865AFD51EB878170017EF8E /* Yo_CommonGameCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_CommonGameCollectionViewModel.swift; sourceTree = "<group>"; };
+		C865AFD71EB878260017EF8E /* Yo_AllGameCollectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_AllGameCollectionViewModel.swift; sourceTree = "<group>"; };
+		C865AFD91EB8792F0017EF8E /* Yo_AllGameViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_AllGameViewCell.swift; sourceTree = "<group>"; };
 		C86BAA271EA8A67A002F46B6 /* Yo_MoviePlayerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yo_MoviePlayerProtocol.swift; sourceTree = "<group>"; };
 		C86BAA2B1EA8AEB3002F46B6 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		C86BAA2D1EA8AEC3002F46B6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -428,6 +436,8 @@
 				C870EC481E8F980700839FA9 /* Yo_HomeCycleView.swift */,
 				C870EC4A1E8FA5A600839FA9 /* Yo_HomeGameViewCell.swift */,
 				C802C6651EB2E988008A4079 /* Yo_GameContentView.swift */,
+				C865AFD31EB867350017EF8E /* Yo_CommonGameViewCell.swift */,
+				C865AFD91EB8792F0017EF8E /* Yo_AllGameViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -440,7 +450,9 @@
 				C8A5720C1E8CFF5900C84579 /* Yo_RecommendCollectionViewModel.swift */,
 				C870EC421E8F833B00839FA9 /* Yo_HomeCycleViewModel.swift */,
 				C870EC4C1E8FAB4700839FA9 /* Yo_GameViewModel.swift */,
-				C802C6631EB2E79E008A4079 /* Yo_GameCollectionViewModel.swift */,
+				C865AFCF1EB85DD80017EF8E /* Yo_RecommendGameCollectionViewModel.swift */,
+				C865AFD51EB878170017EF8E /* Yo_CommonGameCollectionViewModel.swift */,
+				C865AFD71EB878260017EF8E /* Yo_AllGameCollectionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -954,13 +966,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C892F72E1E9CCA4E00737689 /* IndicatorViewProtocol.swift in Sources */,
-				C802C6641EB2E79E008A4079 /* Yo_GameCollectionViewModel.swift in Sources */,
 				C8B60C5D1E7911B500AE7BCC /* Yo_HomeViewController.swift in Sources */,
 				C884662D1E8B86F800EB57AB /* Yo_RecommendViewModel.swift in Sources */,
 				C881549F1E94EFEB00922C32 /* Yo_MainExtension.swift in Sources */,
 				C86C1C311E8A155C00EABC77 /* Yo_FunnyViewController.swift in Sources */,
+				C865AFD61EB878170017EF8E /* Yo_CommonGameCollectionViewModel.swift in Sources */,
 				C88466291E8B840E00EB57AB /* Yo_AnchorModel.swift in Sources */,
 				C8C0028A1E8E21B600E01745 /* Yo_RecommendPrettyCell.swift in Sources */,
+				C865AFDA1EB8792F0017EF8E /* Yo_AllGameViewCell.swift in Sources */,
 				C884662B1E8B85C500EB57AB /* Yo_BaseResultModel.swift in Sources */,
 				C8B60C551E79115500AE7BCC /* GenericTableViewCell.swift in Sources */,
 				C802C6661EB2E988008A4079 /* Yo_GameContentView.swift in Sources */,
@@ -982,6 +995,7 @@
 				C8B6324A1E891A3400AF3871 /* LSYNetWorkTool.swift in Sources */,
 				C808B1431E9B7AD8002928BE /* Yo_RoomShowContentView.swift in Sources */,
 				C802C6681EB2EB16008A4079 /* Yo_GameModel.swift in Sources */,
+				C865AFD01EB85DD80017EF8E /* Yo_RecommendGameCollectionViewModel.swift in Sources */,
 				C870EC4B1E8FA5A600839FA9 /* Yo_HomeGameViewCell.swift in Sources */,
 				C8B60C571E79115500AE7BCC /* GenericViewController.swift in Sources */,
 				C870EC431E8F833B00839FA9 /* Yo_HomeCycleViewModel.swift in Sources */,
@@ -997,6 +1011,7 @@
 				C865AFCE1EB82C7E0017EF8E /* Yo_ListViewModelProtocol.swift in Sources */,
 				C86C1C271E8A10D400EABC77 /* Yo_Common.swift in Sources */,
 				C808B1491E9B7B50002928BE /* Yo_RoomNormalContentView.swift in Sources */,
+				C865AFD81EB878260017EF8E /* Yo_AllGameCollectionViewModel.swift in Sources */,
 				C808B1471E9B7B3D002928BE /* Yo_RoomNormalViewController.swift in Sources */,
 				C8B60C731E79126800AE7BCC /* Yo_LiveContentView.swift in Sources */,
 				C8B60C6F1E7911FD00AE7BCC /* Yo_ProfileViewController.swift in Sources */,
@@ -1015,6 +1030,7 @@
 				C8B60C811E793FB800AE7BCC /* Yo_HomeViewModel.swift in Sources */,
 				1FD4D2E81E76CDA6003D485F /* AppDelegate.swift in Sources */,
 				C86C1C2D1E8A153600EABC77 /* Yo_GameViewController.swift in Sources */,
+				C865AFD41EB867350017EF8E /* Yo_CommonGameViewCell.swift in Sources */,
 				C86C1C391E8A437D00EABC77 /* Yo_RecommendViewController.swift in Sources */,
 				C870EC4D1E8FAB4700839FA9 /* Yo_GameViewModel.swift in Sources */,
 				C826963D1EA9E43700D579A8 /* Yo_portraitLiveControlView.swift in Sources */,

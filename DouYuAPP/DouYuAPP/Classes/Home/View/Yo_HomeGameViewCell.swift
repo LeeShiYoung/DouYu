@@ -16,7 +16,7 @@ class Yo_HomeGameViewCell: Yo_BaseCollectionViewCell {
         setupUI()
     }
     
-    fileprivate lazy var gameName: UILabel = {[weak self] in
+    public lazy var gameName: UILabel = {[weak self] in
         let gameName = UILabel()
         gameName.textColor = UIColor.white
         gameName.font = UIFont.systemFont(ofSize: 12)

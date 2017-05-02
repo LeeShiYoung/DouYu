@@ -14,17 +14,17 @@ class Yo_RecommendViewController: GenericViewController<Yo_RecommendContentView>
         super.viewDidLoad()
         
         contentView.setupUI()
-        
-        collectionViewModel.registerCell { () -> [String : UICollectionViewCell.Type] in
-            return [normalCellID: Yo_RecommendNormalCell.self, prettyCellID: Yo_RecommendPrettyCell.self]
+      
+        collectionViewModel.registerCell {[weak self] () -> (listView: UIScrollView, cell: [String : UICollectionViewCell.Type]) in
+            return ((self?.contentView.collectionView)!, [normalCellID: Yo_RecommendNormalCell.self, prettyCellID: Yo_RecommendPrettyCell.self])
         }
         
-        collectionViewModel.registerReusableView(Kind: UICollectionElementKindSectionHeader) { () -> [String : UIView.Type] in
-            return [sectionHeaderID: Yo_HomeSectionHeaderView.self]
+        collectionViewModel.registerReusableView(Kind: UICollectionElementKindSectionHeader) {[weak self] () -> (listView: UIScrollView, view: [String : UIView.Type]) in
+            return ((self?.contentView.collectionView)!, [sectionHeaderID: Yo_HomeSectionHeaderView.self])
         }
-        
-        gameViewModel.registerCell { () -> [String : UICollectionViewCell.Type] in
-            return [HomeGameViewCell: Yo_HomeGameViewCell.self]
+     
+        gameViewModel.registerCell {[weak self] () -> (listView: UIScrollView, cell: [String : UICollectionViewCell.Type]) in
+            return ((self?.contentView.gameView)!, [HomeGameViewCell: Yo_HomeGameViewCell.self])
         }
         
         loadData()
@@ -45,8 +45,8 @@ class Yo_RecommendViewController: GenericViewController<Yo_RecommendContentView>
         return cycleViewModel
         }()
     
-    fileprivate lazy var gameViewModel: Yo_GameCollectionViewModel = {[weak self] in
-        return Yo_GameCollectionViewModel(CollectionView: (self?.contentView.gameView)!)
+    fileprivate lazy var gameViewModel: Yo_RecommendGameCollectionViewModel = {[weak self] in
+        return Yo_RecommendGameCollectionViewModel(CollectionView: (self?.contentView.gameView)!)
         }()
 }
 

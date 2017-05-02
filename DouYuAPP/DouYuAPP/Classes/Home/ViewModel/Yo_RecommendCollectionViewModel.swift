@@ -23,6 +23,7 @@ class Yo_RecommendCollectionViewModel: Yo_BaseCollectionViewModel {
     required init(CollectionView collection: UICollectionView) {
         super.init(CollectionView: collection)
         collection.delegate = self
+     
     }
 
     override func dequeueCellID(_ indexPath: IndexPath) -> String {

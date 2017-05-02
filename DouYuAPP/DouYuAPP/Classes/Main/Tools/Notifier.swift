@@ -18,14 +18,14 @@ public extension Notifier where Notification.RawValue == String {
         return "\(self).\(notification.rawValue)"
     }
     
-    // post
+    /// post
     static func postNotification(notification: Notification, object: AnyObject? = nil, userInfo: [String : AnyObject]? = nil) {
         let name = nameFor(Notification: notification)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: name), object: object, userInfo: userInfo)
         
     }
     
-    // Add
+    /// Add
     
     static func addObserver(observer: AnyObject, selector: Selector, notification: Notification) {
         let name = nameFor(Notification: notification)
@@ -33,7 +33,7 @@ public extension Notifier where Notification.RawValue == String {
         NotificationCenter.default.addObserver(observer, selector: selector, name: NSNotification.Name(rawValue: name), object: nil)
     }
     
-    // Remove
+    /// Remove
     
     static func removeObserver(observer: AnyObject, notification: Notification, object: AnyObject? = nil) {
         let name = nameFor(Notification: notification)

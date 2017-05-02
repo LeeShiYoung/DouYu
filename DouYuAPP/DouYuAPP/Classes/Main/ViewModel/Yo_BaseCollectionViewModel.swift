@@ -28,6 +28,7 @@ class Yo_BaseCollectionViewModel: NSObject, Yo_ListViewModelProtocol {
         self.collectionView = collection
         super.init()
         self.collectionView?.dataSource = self
+        
     }
     
     typealias dataSoure = [Yo_AnchorBaseGroup]
@@ -38,18 +39,7 @@ class Yo_BaseCollectionViewModel: NSObject, Yo_ListViewModelProtocol {
         dataSoureArr.append(contentsOf: data())
         completion()
     }
-    
-    public func registerCell(_ cells: () -> [String : UICollectionViewCell.Type]) {
-        for (key, value) in cells() {
-            collectionView?.register(value, forCellWithReuseIdentifier: key)
-        }
-    }
-    
-    public func registerReusableView(Kind kind: String, views: () -> [String : UIView.Type]) {
-        for (key, value) in views() {
-            collectionView?.register(value, forSupplementaryViewOfKind: kind, withReuseIdentifier: key)
-        }
-    }
+   
     
     public func dequeueCellID(_ indexPath: IndexPath) -> String {
         return ""

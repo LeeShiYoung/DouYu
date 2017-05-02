@@ -9,6 +9,7 @@
 import UIKit
 import FSPagerView
 
+
 class Yo_RecommendContentView: Yo_BaseContentView {
     
     override func configureView() {

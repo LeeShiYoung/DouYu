@@ -29,11 +29,20 @@ class Yo_BaseSectionHeaderView: GenericReusableView, Yo_BaseCollectionViewProtoc
         self?.addSubview(sectionName)
         return sectionName
         }()
+    
+    fileprivate lazy var garyLayer: CALayer = {
+        let garyLayer = CALayer()
+        garyLayer.frame = CGRect(x: 0, y: 0, width: kScreenW, height: 10)
+        garyLayer.backgroundColor = UIColor.colorWithHex("#e5e5e5")?.cgColor
+        return garyLayer
+    }()
+    
 }
 
 extension Yo_BaseSectionHeaderView {
     fileprivate func setupUI() {
-    
+        layer.addSublayer(garyLayer)
+        
         headerIcon.snp.makeConstraints { (maker) in
             maker.left.equalTo(self.snp.left).offset(10)
             maker.centerY.equalTo(self.snp.centerY).offset(5)

@@ -1,9 +1,8 @@
-
 //
-//  Yo_GameCollectionViewModel.swift
+//  Yo_RecommendGameCollectionViewModel.swift
 //  DouYuAPP
 //
-//  Created by shying li on 2017/4/28.
+//  Created by shying li on 2017/5/2.
 //  Copyright © 2017年 李世洋. All rights reserved.
 //
 
@@ -11,8 +10,7 @@ import UIKit
 
 public let HomeGameViewCell = "HomeGameViewCell"
 
-class Yo_GameCollectionViewModel: Yo_BaseCollectionViewModel {
-    
+class Yo_RecommendGameCollectionViewModel: Yo_BaseCollectionViewModel {
     override func dequeueCellID(_ indexPath: IndexPath) -> String {
         return  HomeGameViewCell
     }
@@ -30,5 +28,4 @@ class Yo_GameCollectionViewModel: Yo_BaseCollectionViewModel {
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-
 }
