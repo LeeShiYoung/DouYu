@@ -25,6 +25,9 @@ class Yo_GameViewModel: NSObject {
                     finishCallBack(Array(gameModelArr![0..<10]), gameModelArr!)
                 }
             }
+            
+            // 发送通知停止加载动画
+            Yo_MainNotification.postNotification(notification: .indicator)
         }
     }
 }

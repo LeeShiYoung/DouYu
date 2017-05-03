@@ -15,15 +15,15 @@ class Yo_RecommendViewController: GenericViewController<Yo_RecommendContentView>
         
         contentView.setupUI()
       
-        collectionViewModel.registerCell {[weak self] () -> (listView: UIScrollView, cell: [String : UICollectionViewCell.Type]) in
+        collectionViewModel.registerCell {[weak self] () -> (listView: UICollectionView, cell: [String : UICollectionViewCell.Type]) in
             return ((self?.contentView.collectionView)!, [normalCellID: Yo_RecommendNormalCell.self, prettyCellID: Yo_RecommendPrettyCell.self])
         }
         
-        collectionViewModel.registerReusableView(Kind: UICollectionElementKindSectionHeader) {[weak self] () -> (listView: UIScrollView, view: [String : UIView.Type]) in
+        collectionViewModel.registerReusableView(Kind: UICollectionElementKindSectionHeader) {[weak self] () -> (listView: UICollectionView, view: [String : UIView.Type]) in
             return ((self?.contentView.collectionView)!, [sectionHeaderID: Yo_HomeSectionHeaderView.self])
         }
      
-        gameViewModel.registerCell {[weak self] () -> (listView: UIScrollView, cell: [String : UICollectionViewCell.Type]) in
+        gameViewModel.registerCell {[weak self] () -> (listView: UICollectionView, cell: [String : UICollectionViewCell.Type]) in
             return ((self?.contentView.gameView)!, [HomeGameViewCell: Yo_HomeGameViewCell.self])
         }
         
@@ -35,7 +35,7 @@ class Yo_RecommendViewController: GenericViewController<Yo_RecommendContentView>
     }()
     
     fileprivate lazy var collectionViewModel: Yo_RecommendCollectionViewModel = {[weak self] in
-        let viewModel = Yo_RecommendCollectionViewModel(CollectionView: (self?.contentView.collectionView)!)
+        let viewModel = Yo_RecommendCollectionViewModel(sourceView: (self?.contentView.collectionView)!)
         viewModel.delegate = self
         return viewModel
         }()
@@ -46,7 +46,7 @@ class Yo_RecommendViewController: GenericViewController<Yo_RecommendContentView>
         }()
     
     fileprivate lazy var gameViewModel: Yo_RecommendGameCollectionViewModel = {[weak self] in
-        return Yo_RecommendGameCollectionViewModel(CollectionView: (self?.contentView.gameView)!)
+        return Yo_RecommendGameCollectionViewModel(sourceView: (self?.contentView.gameView)!)
         }()
 }
 

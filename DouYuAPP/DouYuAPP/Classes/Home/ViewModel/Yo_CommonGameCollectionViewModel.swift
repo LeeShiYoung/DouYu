@@ -12,16 +12,13 @@ public let CommonGameViewCell = "CommonGameViewCell"
 
 class Yo_CommonGameCollectionViewModel: NSObject, Yo_ListViewModelProtocol {
     
-    fileprivate var commonGameView: UICollectionView?
-    
     typealias dataSoure = [Yo_GameModel]
     
     lazy var dataSoureArr = dataSoure()
     
-    required init(CollectionView collection: UICollectionView) {
-        self.commonGameView = collection
+    required init(sourceView: UICollectionView) {
         super.init()
-        commonGameView?.dataSource = self
+        sourceView.dataSource = self
     }
     
     func set(DataSource data: () -> [Yo_GameModel], completion: () -> ()) {

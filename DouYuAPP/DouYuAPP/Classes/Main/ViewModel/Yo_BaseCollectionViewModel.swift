@@ -21,14 +21,10 @@ let kNormalItemH = kNormalItemW * 3 / 4
 let kPrettyItemH = kNormalItemW * 4 / 3
 
 class Yo_BaseCollectionViewModel: NSObject, Yo_ListViewModelProtocol {
-
-    fileprivate var collectionView: UICollectionView?
     
-    required init(CollectionView collection: UICollectionView) {
-        self.collectionView = collection
+    required init(sourceView: UICollectionView) {
         super.init()
-        self.collectionView?.dataSource = self
-        
+        sourceView.dataSource = self
     }
     
     typealias dataSoure = [Yo_AnchorBaseGroup]

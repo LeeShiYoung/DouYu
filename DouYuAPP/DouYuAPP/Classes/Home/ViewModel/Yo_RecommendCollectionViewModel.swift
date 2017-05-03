@@ -20,10 +20,10 @@ protocol Yo_RecommendCollectionViewModelDeleagte: NSObjectProtocol {
 class Yo_RecommendCollectionViewModel: Yo_BaseCollectionViewModel {
     
     weak var delegate: Yo_RecommendCollectionViewModelDeleagte?
-    required init(CollectionView collection: UICollectionView) {
-        super.init(CollectionView: collection)
-        collection.delegate = self
-     
+    
+    required init(sourceView: UICollectionView) {
+        super.init(sourceView: sourceView)
+        sourceView.delegate = self
     }
 
     override func dequeueCellID(_ indexPath: IndexPath) -> String {

@@ -13,16 +13,13 @@ public let AllGameHeaderView = "CommonGameHeaderView"
 
 class Yo_AllGameCollectionViewModel: NSObject, Yo_ListViewModelProtocol {
     
-    fileprivate var allGameView: UICollectionView?
-    
     typealias dataSoure = [Yo_GameModel]
     
     lazy var dataSoureArr = dataSoure()
     
-    required init(CollectionView collection: UICollectionView) {
-        self.allGameView = collection
+    required init(sourceView: UICollectionView) {
         super.init()
-        allGameView?.dataSource = self
+        sourceView.dataSource = self
     }
     
     func set(DataSource data: () -> [Yo_GameModel], completion: () -> ()) {
@@ -33,10 +30,12 @@ class Yo_AllGameCollectionViewModel: NSObject, Yo_ListViewModelProtocol {
     func dequeueCellID(_ indexPath: IndexPath) -> String {
         return AllGameViewCellID
     }
+    
 }
 
 extension Yo_AllGameCollectionViewModel: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: dequeueCellID(indexPath), for: indexPath) as! Yo_AllGameViewCell
         cell.configure(Item: dataSoureArr[indexPath.item], indexPath: indexPath)
         return cell

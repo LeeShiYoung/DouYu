@@ -17,28 +17,29 @@ class Yo_GameViewController: GenericViewController<Yo_GameContentView> {
         
         loadGameData()
         
-        commonGameViewModel.registerCell {[weak self] () -> (listView: UIScrollView, cell: [String : UICollectionViewCell.Type]) in
+        commonGameViewModel.registerCell {[weak self] () -> (listView: UICollectionView, cell: [String : UICollectionViewCell.Type]) in
             return ((self?.contentView.commonGameView)!, [CommonGameViewCell: Yo_CommonGameViewCell.self])
         }
         
-        allGameViewModel.registerReusableView(Kind: UICollectionElementKindSectionHeader) {[weak self] () -> (listView: UIScrollView, view: [String : UIView.Type]) in
+        allGameViewModel.registerReusableView(Kind: UICollectionElementKindSectionHeader) {[weak self] () -> (listView: UICollectionView, view: [String : UIView.Type]) in
             return ((self?.contentView.allGameView)!, [AllGameHeaderView: Yo_BaseSectionHeaderView.self])
         }
         
-        allGameViewModel.registerCell {[weak self] () -> (listView: UIScrollView, cell: [String : UICollectionViewCell.Type]) in
+        allGameViewModel.registerCell {[weak self] () -> (listView: UICollectionView, cell: [String : UICollectionViewCell.Type]) in
             return ((self?.contentView.allGameView)!, [AllGameViewCellID: Yo_AllGameViewCell.self])
         }
+        
     }
     
     fileprivate lazy var gameViewModel = Yo_GameViewModel()
     
     fileprivate lazy var commonGameViewModel: Yo_CommonGameCollectionViewModel = {[weak self] in
-        let commonGameViewModel = Yo_CommonGameCollectionViewModel(CollectionView: (self?.contentView.commonGameView)!)
+        let commonGameViewModel = Yo_CommonGameCollectionViewModel(sourceView: (self?.contentView.commonGameView)!)
         return commonGameViewModel
         }()
     
     fileprivate lazy var allGameViewModel: Yo_AllGameCollectionViewModel = {[weak self] in
-        let allGameViewModel = Yo_AllGameCollectionViewModel(CollectionView: (self?.contentView.allGameView)!)
+        let allGameViewModel = Yo_AllGameCollectionViewModel(sourceView: (self?.contentView.allGameView)!)
         return allGameViewModel
         }()
 }

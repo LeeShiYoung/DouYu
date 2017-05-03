@@ -70,5 +70,10 @@ extension Yo_GameContentView {
         allGameView.snp.makeConstraints { (maker) in
             maker.top.bottom.left.right.equalTo(self)
         }
+        
+        
+        addIndicatorView()
     }
+    
+    
 }
