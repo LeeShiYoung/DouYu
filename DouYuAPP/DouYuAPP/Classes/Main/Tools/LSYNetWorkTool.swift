@@ -35,12 +35,12 @@ class LSYNetWorkTool {
         LSYBaseNetWorkTool.httpRequest(url: httpUrl, parmaters: parmaters, method: HTTPMethod) { (result) in
             switch result {
             case .success(let s):
+                
                 let resultObj = resultClass.init(JSON: s as! [String : Any])
                 completionHandler(Result(value: resultObj, error: nil))
-                break
             case .failure(let e):
+                
                 completionHandler(Result(value: nil, error: e))
-                break
             }
         }
     }
