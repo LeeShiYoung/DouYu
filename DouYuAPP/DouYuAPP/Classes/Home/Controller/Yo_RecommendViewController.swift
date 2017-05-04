@@ -14,7 +14,7 @@ class Yo_RecommendViewController: GenericViewController<Yo_RecommendContentView>
         super.viewDidLoad()
         
         contentView.setupUI()
-      
+        
         collectionViewModel.registerCell {[weak self] () -> (listView: UICollectionView, cell: [String : UICollectionViewCell.Type]) in
             return ((self?.contentView.collectionView)!, [normalCellID: Yo_RecommendNormalCell.self, prettyCellID: Yo_RecommendPrettyCell.self])
         }
@@ -22,7 +22,7 @@ class Yo_RecommendViewController: GenericViewController<Yo_RecommendContentView>
         collectionViewModel.registerReusableView(Kind: UICollectionElementKindSectionHeader) {[weak self] () -> (listView: UICollectionView, view: [String : UIView.Type]) in
             return ((self?.contentView.collectionView)!, [sectionHeaderID: Yo_HomeSectionHeaderView.self])
         }
-     
+        
         gameViewModel.registerCell {[weak self] () -> (listView: UICollectionView, cell: [String : UICollectionViewCell.Type]) in
             return ((self?.contentView.gameView)!, [HomeGameViewCell: Yo_HomeGameViewCell.self])
         }
@@ -55,13 +55,13 @@ extension Yo_RecommendViewController {
         recommendViewModel.loadRecommendData {[weak self] (dataArray, gameArray) in
             self?.collectionViewModel.set(DataSource: { () -> [Yo_AnchorBaseGroup] in
                 return dataArray
-            }, completion: { 
+            }, completion: {
                 self?.contentView.collectionView.reloadData()
             })
             
             self?.gameViewModel.set(DataSource: { () -> [Yo_AnchorBaseGroup] in
                 return gameArray
-            }, completion: { 
+            }, completion: {
                 self?.contentView.gameView.reloadData()
             })
         }
@@ -69,7 +69,7 @@ extension Yo_RecommendViewController {
         recommendViewModel.loadCycleData {[weak self] (dataArray) in
             self?.cycleViewModel.setCycleDataSoure({ () -> [Yo_HomeCycleModel]? in
                 return dataArray
-            }, completion: { 
+            }, completion: {
                 self?.contentView.cycleView.reloadData()
             })
         }

@@ -28,7 +28,6 @@ class Yo_GameViewController: GenericViewController<Yo_GameContentView> {
         allGameViewModel.registerCell {[weak self] () -> (listView: UICollectionView, cell: [String : UICollectionViewCell.Type]) in
             return ((self?.contentView.allGameView)!, [AllGameViewCellID: Yo_AllGameViewCell.self])
         }
-        
     }
     
     fileprivate lazy var gameViewModel = Yo_GameViewModel()

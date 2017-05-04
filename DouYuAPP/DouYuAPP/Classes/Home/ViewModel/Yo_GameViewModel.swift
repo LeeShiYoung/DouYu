@@ -17,13 +17,20 @@ class Yo_GameViewModel: NSObject {
     /// - Parameter finishCallBack: 常见 全部 数据回调
     public func loadGameData(_ finishCallBack: @escaping (_: [Yo_GameModel], [Yo_GameModel]) -> ()) {
         
-        LSYNetWorkTool.httpRequest(method: .get, url: GenerateUrl + "getColumnDetail", parmaters: ["shortName" : "game"], resultClass: Yo_BaseResultModel.self) { (success, failure) in
-            
-            if let success = success {
-                if !success.error {
-                    let gameModelArr = Mapper<Yo_GameModel>().mapArray(JSONArray: success.data!)
+        LSYNetWorkTool.httpRequest(method: .get, url: GenerateUrl + "getColumnDetail", parmaters: ["shortName" : "game"], resultClass: Yo_BaseResultModel.self) { (result) in
+           
+            switch result {
+            case .success(let baseResult):
+                if !baseResult.error {
+                    let gameModelArr = Mapper<Yo_GameModel>().mapArray(JSONArray: baseResult.data!)
                     finishCallBack(Array(gameModelArr![0..<10]), gameModelArr!)
+                } else {
+                    // 抛出异常信息
                 }
+            case .failure(let error):
+                print(error.localizedDescription)
+                // 抛出错误信息
+                break
             }
             
             // 发送通知停止加载动画

@@ -17,36 +17,72 @@ class Yo_RecommendViewModel: NSObject {
         
         dGroup.enter()
         let paramerers = ["limit" : "4", "offset" : "0", "time" : Date.getCurrentTime()]
-        LSYNetWorkTool.httpRequest(method: .get, url: GenerateUrl + "getbigDataRoom", parmaters: paramerers, resultClass: Yo_BaseResultModel.self) { (success, failure) in
-            if let success = success {
-                if !success.error {
+//        LSYNetWorkTool.httpRequest(method: .get, url: GenerateUrl + "getbigDataRoom", parmaters: paramerers, resultClass: Yo_BaseResultModel.self) { (success, failure) in
+        LSYNetWorkTool.httpRequest(method: .get, url: GenerateUrl + "getbigDataRoom", parmaters: paramerers, resultClass: Yo_BaseResultModel.self) { (result) in
+        
+//            if let success = success {
+//                if !success.error {
+//                    self.bigDataRoomGroup.tag_name = "热门"
+//                    self.bigDataRoomGroup.icon_name = "home_header_hot"
+//                    let anchors = Mapper<Yo_AnchorModel>().mapArray(JSONArray: success.data!)
+            //                    self.bigDataRoomGroup.room_list = anchors!
+            //                }
+            //            }
+            
+            switch result {
+            case .success(let baseResult):
+                if !baseResult.error {
                     self.bigDataRoomGroup.tag_name = "热门"
                     self.bigDataRoomGroup.icon_name = "home_header_hot"
-                    let anchors = Mapper<Yo_AnchorModel>().mapArray(JSONArray: success.data!)
+                    let anchors = Mapper<Yo_AnchorModel>().mapArray(JSONArray: baseResult.data!)
                     self.bigDataRoomGroup.room_list = anchors!
+                } else {
+                    // 抛出异常信息
                 }
+            case .failure(let error):
+                // 抛出错误信息
+                break
             }
             dGroup.leave()
         }
         
         dGroup.enter()
-        LSYNetWorkTool.httpRequest(method: .get, url: GenerateUrl + "getVerticalRoom", parmaters: paramerers, resultClass: Yo_BaseResultModel.self) { (success, failure) in
-            if let success = success {
-                if !success.error {
+        LSYNetWorkTool.httpRequest(method: .get, url: GenerateUrl + "getVerticalRoom", parmaters: paramerers, resultClass: Yo_BaseResultModel.self) { (result) in
+            
+            switch result {
+            case .success(let baseResult):
+                if !baseResult.error {
                     self.verticalRoomGroup.tag_name = "颜值"
                     self.verticalRoomGroup.icon_name = "home_header_phone"
-                    let anchors = Mapper<Yo_AnchorModel>().mapArray(JSONArray: success.data!)
+                    let anchors = Mapper<Yo_AnchorModel>().mapArray(JSONArray: baseResult.data!)
                     self.verticalRoomGroup.room_list = anchors!
+                } else {
+                    // 抛出异常信息
                 }
+            case .failure(let error):
+                print(error.localizedDescription)
+                // 抛出错误信息
+                break
             }
             dGroup.leave()
         }
         
         dGroup.enter()
-        LSYNetWorkTool.httpRequest(method: .get, url: GenerateUrl + "getHotCate", parmaters: paramerers, resultClass: Yo_BaseResultModel.self) { (success, failure) in
-            if let success = success {
-                self.gameGroups = Mapper<Yo_AnchorBaseGroup>().mapArray(JSONArray: success.data!)!
+        LSYNetWorkTool.httpRequest(method: .get, url: GenerateUrl + "getHotCate", parmaters: paramerers, resultClass: Yo_BaseResultModel.self) { (result) in
+           
+            switch result {
+            case .success(let baseResult):
+                if !baseResult.error {
+                    self.gameGroups = Mapper<Yo_AnchorBaseGroup>().mapArray(JSONArray: baseResult.data!)!
+                } else {
+                    // 抛出异常信息
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+                // 抛出错误信息
+                break
             }
+
             dGroup.leave()
         }
         
@@ -70,10 +106,20 @@ class Yo_RecommendViewModel: NSObject {
     
     public func loadCycleData(_ finishCallBack: @escaping (_: [Yo_HomeCycleModel]?) -> ()) {
     
-        LSYNetWorkTool.httpRequest(method: .get, url: "http://www.douyutv.com/api/v1/slide/6", parmaters: ["version" : "2.471"], resultClass: Yo_BaseResultModel.self) { (success, failure) in
-            if let success = success {
-                let cycleModelArray = Mapper<Yo_HomeCycleModel>().mapArray(JSONArray: success.data!)
-                finishCallBack(cycleModelArray)
+        LSYNetWorkTool.httpRequest(method: .get, url: "http://www.douyutv.com/api/v1/slide/6", parmaters: ["version" : "2.471"], resultClass: Yo_BaseResultModel.self) { (result) in
+           
+            switch result {
+            case .success(let baseResult):
+                if !baseResult.error {
+                    let cycleModelArray = Mapper<Yo_HomeCycleModel>().mapArray(JSONArray: baseResult.data!)
+                    finishCallBack(cycleModelArray)
+                } else {
+                    // 抛出异常信息
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+                // 抛出错误信息
+                break
             }
         }
     }
