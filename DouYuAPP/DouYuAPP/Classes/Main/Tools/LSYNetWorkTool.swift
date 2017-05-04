@@ -46,7 +46,7 @@ class LSYNetWorkTool {
     }
 }
 
-class LSYBaseNetWorkTool {
+class LSYBaseNetWorkTool: Yo_BaseNetWorkToolProtocol {
     
     typealias completionHandler = (Result<Any>) -> Void
     var completionHandler: completionHandler?
@@ -59,18 +59,24 @@ class LSYBaseNetWorkTool {
 
                 let result = Result(value: response.result.value, error: response.result.error)
                 completionHandler(result)
+              
+                LSYBaseNetWorkTool.handleStatusCode(code: response.response?.statusCode)
             }
         case .post:
             Alamofire.request(httpUrl, method: .post, parameters: parmaters, headers: LSYHttpHeader.header).responseJSON { (response) in
 
                 let result = Result(value: response.result.value, error: response.result.error)
                 completionHandler(result)
+                
+                LSYBaseNetWorkTool.handleStatusCode(code: response.response?.statusCode)
             }
         case .put:
             Alamofire.request(httpUrl, method: .put, parameters: parmaters, headers: LSYHttpHeader.header).responseJSON { (response) in
 
                 let result = Result(value: response.result.value, error: response.result.error)
                 completionHandler(result)
+                
+                LSYBaseNetWorkTool.handleStatusCode(code: response.response?.statusCode)
             }
         }
     }
@@ -102,6 +108,3 @@ extension Result {
         }
     }
 }
-
-
-

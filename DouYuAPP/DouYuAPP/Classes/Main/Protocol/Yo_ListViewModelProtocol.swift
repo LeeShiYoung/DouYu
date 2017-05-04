@@ -23,7 +23,6 @@ protocol Yo_ListViewModelProtocol {
 
 extension Yo_ListViewModelProtocol where Self: NSObject {
     
-    
     func registerCell(_ cells:() -> (listView: UICollectionView, cell: [String: UICollectionViewCell.Type])) {
         for (key, value) in cells().cell {
             
